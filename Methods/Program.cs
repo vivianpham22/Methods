@@ -41,13 +41,28 @@ namespace Methods
             //RobotWarning("Will Robinson");
             //Useless();
 
+            //// Birthday and Vehicle example
+            //string myBirthMonth = "September";
+            //string myFriendBirthMonth = "December";
+            //string myVehicle = Vehicle(myBirthMonth);
+            //string myFriendVehicle = Vehicle(myFriendBirthMonth);
 
-            string myBirthMonth = "September";
-            string myFriendBirthMonth = "December";
-            string myVehicle = Vehicle(myBirthMonth);
-            string myFriendVehicle = Vehicle(myFriendBirthMonth);
-        
-            Console.WriteLine("My future vehicle is {0} and Jordans future vehicle is {1}", myVehicle, myFriendBirthMonth);
+            //Console.WriteLine("My future vehicle is {0} and Jordans future vehicle is {1}", myVehicle, myFriendBirthMonth);
+
+
+            //favoriteFood("Fries", "Vivian");
+
+            //RetirementCalculator(23);
+
+
+
+            //double hoursWorked = 42.3d;
+            //double hourlyWage = 12.50d;
+
+            //Console.WriteLine("Your monthly wage is {0}.", WageCalculator(hoursWorked, hourlyWage));
+
+            petName("Jax");
+
 
 
         }
@@ -60,14 +75,14 @@ namespace Methods
 
             int sum = firstNumber + secondNumber;
 
-            return sum; 
+            return sum;
             // The "return" keyword takes whatever value is determined by using this method 
             // and send that value back to where I called method. 
 
         }
         // If you have a method that does not have a return value, you would use the keyword 
         // "void". When we have a "void" return type we DON'T need to use the keyword "return"
-       
+
         public static void RobotWarning(string name)
         {
             Console.WriteLine("Danger, " + name + "!!");
@@ -88,11 +103,59 @@ namespace Methods
             }
             else
             {
-                vehicleFortune = " SUV";  
+                vehicleFortune = " SUV";
             }
 
             return vehicleFortune;
         }
+
+        // Create a string called FavoriteFood
+        // It should take two string parameters. 
+        // - One representing a name, and the other respresenting a favorite food.
+        // The return should be a void
+        // The method should concatenmate
+
+        public static void favoriteFood(string food, string name)
+        {
+            Console.WriteLine(name + "'s favorite food is " + food);
+        }
+
+
+        // Create a method called RetirementCalculator 
+        // It should take an int as a paramater representing the users gae
+        // The method should calculate how many more years until the user retires using 65 as the age of retirement.
+        // The return type should be void, should be an INT
+        // Once it calculates the users retirement age it should print 
+        // - " The users will retires in X years" where X represents the value that was calculated.
+
+        public static void RetirementCalculator(int age)
+        {
+            int retireAge = 65 - age;
+            Console.WriteLine("You will retire in {0} years", retireAge);
+        }
+
+        public static double WageCalculator(double hoursWorkedWeekly, double hourlyWage)
+        {
+            //This method should calculate the MONTHLY wage
+            double monthlyWage = (hoursWorkedWeekly * 52 * hourlyWage) / 12;
+            return monthlyWage;
+        }
+        
+
+        // Create 2 methods of your chosing. 
+        // One should have a non-void return type. 
+        // Both of the methods should take at least one parameter.
+        // Remember when naming your methof that it should represent what your method does.
+        // Your method should only to accomplish one thing. 
+        // Be creative
+
+        public static void petName(string pet)
+        {
+            Console.WriteLine("My pets names is " + pet);
+        }
+         
+        
+     
 
     }
 }
